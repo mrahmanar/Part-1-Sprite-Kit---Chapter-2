@@ -24,7 +24,7 @@ class GameScene: SKScene { //extends SKScene and implements two init() methods
     override init(size: CGSize) { //takes a CGSize parameter that represents the size you want the scene to be from GameViewController.
         super.init(size: size)
         physicsWorld.contactDelegate = self //to make the GameScene the delegate of the scene’s physicsWorld.contactD elegate.
-        physicsWorld.gravity = CGVector(dx: 0.0, dy:  -0.2); //To slow things down, you need to play around with the game world’s gravity settings. A value of 0.0 for the x-coordinate and a value of –0.2 for the y-coordinate. Though setting the y-coordinate to –0.2 helps us see the playerNode fall off the scene more conducive to game play rather than -0.1.
+        physicsWorld.gravity = CGVector(dx: 0.0, dy:  -2.0); //To slow things down, you need to play around with the game world’s gravity settings. A value of 0.0 for the x-coordinate and a value of –2.0 for the y-coordinate. Though setting the y-coordinate to –2.0 helps us see the playerNode fall off the scene more conducive to game play rather than -1.0.
         isUserInteractionEnabled = true
         
         //add the background
